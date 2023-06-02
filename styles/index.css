@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+:root {
+    --main-bg-color: #fff;
+    --var-prim-color: hsl(240, 38%, 20%);
+    --var-sec-color: hsl(240, 18%, 77%);
+    --var-ter-color: hsl(240, 52%, 49%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+}
+/* Header */
+header{
+    width: 100vw;
+    height: 15vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header img{
+    width: auto;
+    height: 50px;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    list-style: none;
+    font-weight: 500;
+}
+
+ul > li a{
+    text-decoration: none;
+    color: var(--var-prim-color);
+    transition: 0.4s;
+}
+
+ul > li a:hover{
+    color: var(--var-ter-color);
+}
+
+/* Testimonials Section */
+main{
+    margin: 5px 10px;
+}
+
+section{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+
+}
+
+#img-testi{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+/* Sidebar */
+aside{
+    margin: 5px 20px;
+}
+
+#form-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+form{
+    width: 500px;
+    padding: 15px;
+}
+.title-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8px;
+}
+label{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--var-prim-color);
+    margin-top: 8px;
+}
+input{
+    border: 2px solid hsl(240, 48%, 53%);
+    border-radius: 8px;
+    width: 40vw;
+    height: 40px;
+    background-color: var(--main-bg-color);
+    margin: 5px 0px;
+}
+input:focus{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid hsl(240, 52%, 49%);
+}
+input[type="submit"]{
+    background-color: hsl(240, 48%, 53%);
+    color: #fff;
+}
+textarea[id="coment"]{
+    border: 2px solid hsl(240, 48%, 53%);
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
