@@ -10,18 +10,21 @@
     --var-sec-color: hsl(240, 18%, 77%);
     --var-ter-color: hsl(240, 52%, 49%);
 }
-
 body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--main-bg-color);
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas:
+     "header"
+     "slider"
+     "form"
+     "footer";
 }
 /* Header */
 header{
     width: 100vw;
     height: 15vh;
     padding: 10px;
+    grid-area: header;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -49,34 +52,87 @@ ul > li a{
 ul > li a:hover{
     color: var(--var-ter-color);
 }
-
-/* Testimonials Section */
-main{
-    margin: 5px 10px;
+/* Slider CSS */
+.container-slider{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    grid-area: slider;
+    background-color: hsl(240, 18%, 77%);
 }
 
-section{
-    width: 100vw;
-    height: 100%;
+.container-test{
+    position: relative;
     display: flex;
-
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 80vh;
+}
+#test{
+    position: absolute;
+    top: 12vh;
+    left: 1vw;
 }
 
 #img-testi{
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
+    width: 300px;
+    height: 280px;
+    position: relative;
+    left: 8vw;
+    border-radius: 15px;
+}
+.slider{
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity .2s;
 }
 
+.on{
+    opacity: 1;
+}
+
+#prev-button, #next-button{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#prev-button img, #next-button img{
+    width: 100%;
+    height: 100%;
+}
+
+.testm{
+    color: white;
+    font-weight: 500;
+    line-height: 3.5vh;
+}
+.info{
+    color:white;
+    padding-top: 5px;
+}
+.info span{
+    font-weight: 700;
+}
 /* Sidebar */
 aside{
     margin: 5px 20px;
+    grid-area: form;
 }
 
 #form-container{
     display: flex;
     justify-content: center;
     margin: 20px;
+    padding-top: 10vh;
 }
 form{
     width: 500px;
@@ -119,6 +175,7 @@ textarea[id="coment"]{
 .attribution { 
     font-size: 11px; 
     text-align: center; 
+    grid-area: footer;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 

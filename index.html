@@ -22,30 +22,36 @@
   </header>
   <main class="content">
     <section>
-      <div id="testimonial-cont">
-        <img id="img-testi" src="./images/image-tanya.jpg">
-        <div class="testimonial">
-          <img id="quot" src="./images/pattern-quotes.svg">
-          <p> “ I’ve been interested in coding for a while but never taken the jump, until now. 
-          I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-          excited about the future. ”</p>
+      <div class="container-slider">
+        <button id="prev-button"><img src="./images/icon-prev.svg"></button>
+        <div class="container-test">
+          <div class="testimonials">
+            <div id="test" class="slider on">
+              <img id="img-testi" src="./images/image-tanya.jpg">
+              <div class="testm">
+                <p> “ I’ve been interested in coding for a while but never taken the jump, until now. 
+                I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+                excited about the future. ”</p>
+              </div>
+              <div class="info">
+                <p><span>Tanya Sinclair</span>  |  UX Engineer</p>
+              </div>
+            </div>
+            <div id="test" class="slider">
+              <img id="img-testi" src="./images/image-john.jpg">
+              <div class="testm">
+                <p> “ If you want to lay the best foundation possible I’d recommend taking this course. 
+                  The depth the instructors go into is incredible. I now feel so confident about 
+                  starting up as a professional developer. ”</p>
+              </div>
+              <div class="info">
+                  <p><span>John Tarkpor</span>   |  Junior Front-end Developer</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="info">
-          <p><span>Tanya Sinclair</span>UX Engineer</p>
-        </div>
-      </div>
-      <div id="testimonial-cont">
-        <img id="img-testi" src="./images/image-john.jpg">
-        <div class="testimonial">
-          <p>  “ If you want to lay the best foundation possible I’d recommend taking this course. 
-            The depth the instructors go into is incredible. I now feel so confident about 
-            starting up as a professional developer. ”
-          </p>
-        </div>
-        <div class="info">
-          <p><span>John Tarkpor</span>Junior Front-end Developer</p>
-        </div>
-      </div>
+        <button id="next-button"><img src="./images/icon-next.svg"></button>
+    </div> 
     </section>
     <aside>
       <div id="form-container">
