@@ -15,8 +15,8 @@
     <menu>
       <ul>
         <li><a href="#">Menu</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#testimonials-sec">Testimonials</a></li>
+        <li><a href="#form-container">Contact</a></li>
       </ul>
     </menu>
   </header>
@@ -24,9 +24,9 @@
     <img id="banner" src="./images/banner.png">
   </div>
   <main class="content">
-    <section>
+    <section id="testimonials-sec">
       <div class="container-slider">
-        <button id="prev-button"><img src="./images/icon-prev.svg"></button>
+       <!--<button id="prev-button"><img src="./images/icon-prev.svg"></button> Comentado por conta de bug no js que ainda nao corrigi-->
         <div class="container-test">
           <div class="testimonials">
             <div id="test" class="slider on">
@@ -51,6 +51,16 @@
                   <p><span>John Tarkpor</span>   |  Junior Front-end Developer</p>
               </div>
             </div>
+            <div id="test" class="slider">
+              <img id="img-testi" src="./images/image-anne.png">
+              <div class="testm">
+                <p> “ I’ve been interested in coding for a while. I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+                excited about the future. ”</p>
+              </div>
+              <div class="info">
+                <p><span>Anne Adams</span>  | Senior Back-end</p>
+              </div>
+            </div>
           </div>
         </div>
         <button id="next-button"><img src="./images/icon-next.svg"></button>
@@ -58,25 +68,25 @@
     </section>
     <aside>
       <div id="form-container">
-        <form>
+        <form id="form-id">
           <div class="title-form">
             <h3>Contact Us</h3>
           </div>
           <div class="full-box">
             <label for="name">First Name</label>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name" data-required>
           </div>
           <div class="full-box">
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname">
+            <input type="text" id="lname" name="lname" data-required>
           </div>
           <div class="full-box">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" data-email-validate>
           </div>
           <div class="full-box">
             <label for="tel">Phone Number</label>
-            <input type="tel" id="tel" name="tel">
+            <input type="tel" id="tel" name="tel" data-max-length="11" placeholder="(00)-12345-6789">
           </div>
           <div class="full-box">
             <label for="coment">Coment</label>
@@ -97,6 +107,8 @@
     </div>
   </footer>  
 
+  <p class="error-validation template"></p>
+  <script src="./scripts/form.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 </html>

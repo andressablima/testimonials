@@ -15,7 +15,7 @@ function showSlider() {
 
 function nextSlider() {
     hideSlider()
-    if(currentSlide == slider.length -1){
+    if(currentSlide === slider.length -1){
         currentSlide = 0
     } else {
         currentSlide++
@@ -25,7 +25,7 @@ function nextSlider() {
 
 function prevSlider() {
     hideSlider()
-    if(currentSlide == 0) {
+    if(currentSlide === 0) {
         currentSlide = slider.lenght -1
     } else {
         currentSlide--
@@ -37,4 +37,3 @@ function prevSlider() {
 btnNext.addEventListener('click', nextSlider)
 btnPrev.addEventListener('click', prevSlider)
 
-console.log(slider)
