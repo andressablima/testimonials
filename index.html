@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-  <header>
+  <header id="header">
     <img src="./images/logo1.png">
     <menu>
       <ul>
@@ -26,6 +26,7 @@
   <main class="content">
     <section id="testimonials-sec">
       <div class="container-slider">
+       <img class="patern" src="./images/pattern-bg.svg"> 
        <!--<button id="prev-button"><img src="./images/icon-prev.svg"></button> Comentado por conta de bug no js que ainda nao corrigi-->
         <div class="container-test">
           <div class="testimonials">
@@ -90,7 +91,7 @@
           </div>
           <div class="full-box">
             <label for="coment">Coment</label>
-            <textarea id="coment" name="coment" rows="10" cols="67" placeholder="Tell us your suggestions, questions or concerns"></textarea>
+            <textarea id="coment" name="coment" rows="10" cols="50" placeholder="Tell us your suggestions, questions or concerns"></textarea>
           </div>
           <div class="full-box">
             <input type="submit" id="btn-submit" value="SEND">
@@ -101,9 +102,11 @@
   </main>
 
   <footer>
-    <div class="attribution">
-      Coded by <a href="https://www.linkedin.com/in/andressablima/">Andressa Lima</a> | 
-      <a href="https://github.com/andressablima">GitHub </a>
+    <a href="#header"><img class="bot-logo" src="./images/logo1.png"></a> 
+    <div class="attribution">Coded by: Andressa Lima</div>
+    <div cladd="icons">
+      <a href="https://www.linkedin.com/in/andressablima/"><img class="linkedin" src="./images/linkedin.png"></a>
+      <a href="https://github.com/andressablima"><img class="github" src="./images/github.png"></a>
     </div>
   </footer>  
 
